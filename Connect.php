@@ -9,10 +9,10 @@
 
 	$conn = new mysqli('localhost','root','','test');
 
-	if($conn->connect_error){
-		echo "$conn->connect_error";
-		die("Connection Failed : ". $conn->connect_error);
-	} else {
+// 	if($conn->connect_error){
+// 		echo "$conn->connect_error";
+// 		die("Connection Failed : ". $conn->connect_error);
+// 	} else {
 		$stmt = $conn->prepare("INSERT INTO registration(YourName, email, Phone, BillId,NoOfUnitsConsumed , BillAmount,NoOfFamilyMembers ) values(?, ?, ?, ?, ?, ?, ?)");
 		$stmt->bind_param("ssisiii", $YourName, $email, $Phone, $BillId, $NoOfUnitsConsumed , $BillAmount, $NoOfFamilyMembers );
 		$execval = $stmt->execute();
@@ -20,5 +20,5 @@
 		echo "Registered Successfully...";
 		$stmt->close();
 		$conn->close();
-	}
+// 	}
 ?>
