@@ -65,10 +65,11 @@
 /* home page */
 
 #background {
-    background-image: url(img/background-1.jpg);
+    background-image: url(img/waterpic.png);
     height: 45rem;
     width: 100%;
-    background-position: top 30% right 10%;
+    padding-left: 50px;
+    background-position: top 30% left 80%;
     background-size: cover;
     display: flex;
     align-items: flex-start;
